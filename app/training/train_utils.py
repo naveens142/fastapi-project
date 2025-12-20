@@ -1,8 +1,10 @@
 import os
 
-DATA_DIR = 'data'
+# Data file lives under app/notebooks in this repository
 DATA_FILE_NAME = 'car-details.csv'
-DATA_FILE_PATH = os.path.join(DATA_DIR, DATA_FILE_NAME)
+DATA_FILE_PATH = os.path.abspath(
+	os.path.join(os.path.dirname(__file__), '..', 'notebooks', DATA_FILE_NAME)
+)
 
 APP_DIR = 'app'
 MODEL_DIR_NAME = 'models'
